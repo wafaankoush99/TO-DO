@@ -37,8 +37,8 @@ In Phase 2, we’re going to connect the To Do Manager to a deployed API, backed
 
 ### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
 
+![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png)
 
-![Untitled (26)](https://user-images.githubusercontent.com/78326110/123718241-513bf300-d887-11eb-971e-52ce89dec76e.jpg)
 
 ### UML 
 
