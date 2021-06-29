@@ -44,7 +44,7 @@ In Phase 2, we’re going to connect the To Do Manager to a deployed API, backed
 
 [Board Link](https://miro.com/welcomeonboard/SEpTRVpGMVNkQ0RjU0NiclRORUpRcW5TdE9rRmowTTJKYkVyVEl3YVVLd2lyOHZDQkNDVWNac2ZuR3QybHVvSHwzMDc0NDU3MzU3MzU4Mjc2Mjk1)
 
-![todo app](https://user-images.githubusercontent.com/78326110/123718365-9bbd6f80-d887-11eb-892d-2371ab5e4eb5.jpg)
+![todo app (1)](https://user-images.githubusercontent.com/78326110/123719637-b2b19100-d88a-11eb-84e1-68a5db2677b6.jpg)
 
 ***
 
