@@ -35,17 +35,17 @@ In Phase 2, we’re going to connect the To Do Manager to a deployed API, backed
 - As a user, I would like to be able to add, update, and delete To Do items
 - As a user, I would like my To Do Items to be permanently stored so that I can re-access them at any time, using any device
 
-<!-- ### [See deployed link <=](https://60da1cfbba31a12b7938040d--fervent-swartz-8d7aa3.netlify.app/)
+### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
 
 
-![Screenshot 2021-06-28 221224](https://user-images.githubusercontent.com/78326110/123691212-0063d480-d85e-11eb-92b2-da1eabd72cb0.png)
+![Untitled (26)](https://user-images.githubusercontent.com/78326110/123718241-513bf300-d887-11eb-971e-52ce89dec76e.jpg)
 
 ### UML 
 
 [Board Link](https://miro.com/welcomeonboard/SEpTRVpGMVNkQ0RjU0NiclRORUpRcW5TdE9rRmowTTJKYkVyVEl3YVVLd2lyOHZDQkNDVWNac2ZuR3QybHVvSHwzMDc0NDU3MzU3MzU4Mjc2Mjk1)
 
-![Untitled (26)](https://user-images.githubusercontent.com/78326110/123693426-b4fef580-d860-11eb-8594-f188a7d2e0ec.jpg)
+![todo app](https://user-images.githubusercontent.com/78326110/123718365-9bbd6f80-d887-11eb-892d-2371ab5e4eb5.jpg)
 
-*** -->
+***
 
 
