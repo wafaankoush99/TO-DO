@@ -7,6 +7,9 @@ import { Form } from 'react-bootstrap'
 
 import useForm from './useForm'
 
+
+import ContentSetting from './settings.jsx'
+
 function TodoForm(props) {
 
   const [handleInputChange, handleSubmit] = useForm(callback);
@@ -74,6 +77,7 @@ function TodoForm(props) {
 
         <Button className="addItemfromFormbtn" type="submit" variant="primary">Add Item</Button >
       </Form>
+      <ContentSetting />
     </>
   );
 
