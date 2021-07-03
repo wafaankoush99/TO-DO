@@ -1,13 +1,17 @@
 
-import React from 'react'
+// import React from 'react'
 
 import { useState } from 'react'
 import If from './If'
 
-import { Button } from 'react-bootstrap'
-import { Form, Badge, Toast } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
+import { Badge, Toast } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import { SettingsContext } from './setting-context';
+import { Pagination } from 'react-bootstrap'
+
+import React, { useContext } from 'react';
 
 // class TodoList extends React.Component {
 function TodoList(props) {
@@ -15,6 +19,68 @@ function TodoList(props) {
 
     const [flag, setFlag] = useState(false)
     const [id, setId] = useState('')
+
+    let list = props.list
+
+    const context = useContext(SettingsContext)
+
+    const maxItems = context.itemPerPage;
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    if (context.finished) {
+        list = list.filter((task) => !task.complete);
+    }
+
+    // let numOfPages = list.length / maxItems + 1;
+    const last = currentPage * context.itemPerPage;
+    const first = last - context.itemPerPage;
+
+
+    if (context.sortBy === 'difficulty') {
+        list.sort((a, b) => {
+            if (a.difficulty && b.difficulty) {
+                if (a.difficulty > b.difficulty) return -1
+                else if (a.difficulty < b.difficulty) return 1
+                else if (a.difficulty === b.difficulty) return 0
+            }
+        })
+    }
+    else if (context.sortBy === 'assignee') {
+        list.sort((a, b) => {
+            if (a.assignee && b.assignee) {
+                if (a.assignee.toLowerCase() > b.assignee.toLowerCase()) return 1
+                else if (a.assignee.toLowerCase() < b.assignee.toLowerCase()) return -1
+                else if (a.assignee.toLowerCase() === b.assignee.toLowerCase()) return 0
+            }
+        })
+    }
+    else if (context.sortBy === 'text') {
+        list.sort((a, b) => {
+            if (a.text && b.text) {
+                if (a.text.toLowerCase() > b.text.toLowerCase()) return -1
+                else if (a.text.toLowerCase() < b.text.toLowerCase()) return 1
+                else if (a.text.toLowerCase() === b.text.toLowerCase()) return 0
+            }
+        })
+    }
+
+    let currentTasks = list.slice(first, last);
+
+    let numOfPages =currentTasks.length / maxItems + 1;
+
+    context.setTaskSum(list.length);
+
+    let active = currentPage;
+    let items = [];
+    for (let number = 1; number <= numOfPages; number++) {
+        items.push(
+            <Pagination.Item key={number} active={number === active}>
+                {number}
+            </Pagination.Item>,
+        );
+    }
+
 
     const toggle = id => {
         setFlag(!flag)
@@ -33,7 +99,9 @@ function TodoList(props) {
         <>
             {/* <ListGroup> */}
 
-            {props.list.map(item => (
+
+            <div className="toastttt" >
+            {currentTasks.map(item => (
                 // <ListGroup.Item action variant={item.complete ? 'dark' : 'light'}
                 //     className={`complete-${item.complete.toString()}`}
                 //     key={item._id}
@@ -57,7 +125,7 @@ function TodoList(props) {
 
                 //     <br></br>
 
-                <Toast
+                <Toast 
                     onClose={() => props.deleteTask(item._id)} value={item._id}
                 >
                     {/* <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button> */}
@@ -91,11 +159,30 @@ function TodoList(props) {
 
                 // </ListGroup.Item>
             ))}
+
+            </div>
             {/* </ListGroup> */}
+
+            <Pagination>
+                <Pagination.Prev
+
+                    disabled={active === 1 ? true : false}
+                    onClick={() => {
+                        setCurrentPage(currentPage - 1);
+                    }}
+                />
+                {items}
+                <Pagination.Next
+                    disabled={active > numOfPages - 1 ? true : false}
+                    onClick={() => {
+                        setCurrentPage(currentPage + 1);
+                    }}
+                />
+            </Pagination>
 
             <If condition={flag}
             >
-                <Form onSubmit={editTask}>
+                {/* <Form onSubmit={editTask}>
 
                     <Form.Label>
                         <span>Edit Task</span>
@@ -103,7 +190,7 @@ function TodoList(props) {
                     </Form.Label>
                     <Button variant="outline-secondary" type='submit' >Edit</Button>
 
-                </Form>
+                </Form> */}
 
             </If>
 

@@ -10,8 +10,8 @@ const useAjax = () => {
     const fetch = () => {
 
       axios.post(todoAPI, item, {
-        mode: 'cors',
-        cache: 'no-cache',
+        mode: '',
+        cache: '',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(item)
 
@@ -37,13 +37,12 @@ const useAjax = () => {
         axios.put(url2, item, {
           headers: { 'Content-Type': 'application/json' },
           data: JSON.stringify(item),
-          cache: 'no-cache',
-          mode: 'cors',
+          cache: '',
+          mode: '',
 
         })
-          .then(res => setList(list.map(listItem => listItem._id === item._id ? res.data : listItem)))
+          .then(res => setList(list.map(list => list._id === item._id ? res.data : list)))
           .catch(console.error);
-
       }
 
       fetch();
@@ -55,8 +54,8 @@ const useAjax = () => {
     const fetch = async () => {
       let res = await axios.get(todoAPI, {
         headers: { 'Content-Type': 'application/json' },
-        cache: 'no-cache',
-        mode: 'cors',
+        cache: '',
+        mode: '',
 
       })
       setList(res.data.results)
@@ -72,10 +71,10 @@ const useAjax = () => {
     const fetch = async () => {
       axios.delete(url2, {
         headers: { 'Content-Type': 'application/json' },
-        cache: 'no-cache',
-        mode: 'cors',
+        cache: '',
+        mode: '',
 
-      }).then((res) => setList(list.filter((item) => item._id !== res.data.id) || {}))
+      }).then((res) => setList(list.filter((it) => it._id !== res.data.id) || {}))
 
     }
     fetch();
