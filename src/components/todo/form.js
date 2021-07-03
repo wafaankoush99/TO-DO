@@ -36,6 +36,8 @@ function TodoForm(props) {
   return (
     <>
 
+<ContentSetting />
+
       <Form onSubmit={handleSubmit}>
       <h4 className="fromform">Add To Do Item</h4>
         <Form.Group controlId="formBasicEmail">
@@ -77,7 +79,7 @@ function TodoForm(props) {
 
         <Button className="addItemfromFormbtn" type="submit" variant="primary">Add Item</Button >
       </Form>
-      <ContentSetting />
+      
     </>
   );
 

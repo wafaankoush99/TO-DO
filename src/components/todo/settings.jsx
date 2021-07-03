@@ -14,25 +14,25 @@ const ContentSetting = (props) => {
     }
     return (
         <React.Fragment>
-            <h2>Settings</h2>
-            <form>
-                <Button variant="info" style={{ 'width': '50%', 'text-align': 'center', }} onClick={context.toggle} >{context.finished ? 'show all Tasks' : 'hide Completed Tasks'}</Button >
-                <Form.Label name="Sort By"> Sort Tasks By :
+            {/* <form> */}
+            <form className="settingDiv">
+                <Form.Label name="Sort By" className="formLabel">  Sort tasks by:
                     <select name="Sort By" title="Sort By" onChange={sortByHandler}>
                         <option value="assignee" >assignee</option>
                         <option value="difficulty" >difficulty</option>
                         <option value="text" >text</option>
                     </select>
-                    {/* <input type="switch" name="complete" /> 
-            <input type="switch" name="pending" /> 
-
-            <input type="switch" name="difficultySort" />  */}
-                    <label name="itemPerPage"> Items per page </label>
+                    {/* <input type="switch" name="complete" />
+                    <input type="switch" name="pending" />
+                    <input type="switch" name="difficultySort" />  */}
+                    <label name="itemPerPage"> <p className="perPage"> Tasks per page: </p>  </label>
                     <input type="number" id="itemPerPage" name="itemPerPage" onChange={itemPerPageHandler} /><br />
 
                     {/* <button type="submit"></button> */}
                 </Form.Label>
+                <Button className="toggleBtnn" variant="info" onClick={context.toggle} >{context.finished ? 'show all Tasks' : 'hide Completed Tasks'}</Button >
             </form>
+            {/* </form> */}
         </React.Fragment>
     )
 }

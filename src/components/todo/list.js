@@ -4,8 +4,8 @@
 import { useState } from 'react'
 import If from './If'
 
-import { Button } from 'react-bootstrap'
-import { Form, Badge, Toast } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
+import { Badge, Toast } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { SettingsContext } from './setting-context';
@@ -49,8 +49,8 @@ function TodoList(props) {
     else if (context.sortBy === 'assignee') {
         list.sort((a, b) => {
             if (a.assignee && b.assignee) {
-                if (a.assignee.toLowerCase() > b.assignee.toLowerCase()) return -1
-                else if (a.assignee.toLowerCase() < b.assignee.toLowerCase()) return 1
+                if (a.assignee.toLowerCase() > b.assignee.toLowerCase()) return 1
+                else if (a.assignee.toLowerCase() < b.assignee.toLowerCase()) return -1
                 else if (a.assignee.toLowerCase() === b.assignee.toLowerCase()) return 0
             }
         })
@@ -99,6 +99,8 @@ function TodoList(props) {
         <>
             {/* <ListGroup> */}
 
+
+            <div className="toastttt" >
             {currentTasks.map(item => (
                 // <ListGroup.Item action variant={item.complete ? 'dark' : 'light'}
                 //     className={`complete-${item.complete.toString()}`}
@@ -123,7 +125,7 @@ function TodoList(props) {
 
                 //     <br></br>
 
-                <Toast
+                <Toast 
                     onClose={() => props.deleteTask(item._id)} value={item._id}
                 >
                     {/* <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button> */}
@@ -157,10 +159,13 @@ function TodoList(props) {
 
                 // </ListGroup.Item>
             ))}
+
+            </div>
             {/* </ListGroup> */}
 
             <Pagination>
                 <Pagination.Prev
+
                     disabled={active === 1 ? true : false}
                     onClick={() => {
                         setCurrentPage(currentPage - 1);
@@ -177,7 +182,7 @@ function TodoList(props) {
 
             <If condition={flag}
             >
-                <Form onSubmit={editTask}>
+                {/* <Form onSubmit={editTask}>
 
                     <Form.Label>
                         <span>Edit Task</span>
@@ -185,7 +190,7 @@ function TodoList(props) {
                     </Form.Label>
                     <Button variant="outline-secondary" type='submit' >Edit</Button>
 
-                </Form>
+                </Form> */}
 
             </If>
 

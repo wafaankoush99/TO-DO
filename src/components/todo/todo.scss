@@ -37,6 +37,7 @@ body, html {
         margin-right: 11em;
                 width: 95%;
         border: 0.5px solid #ddd;
+        margin-top: 10px;
 
         label {
             display: flex;
@@ -165,4 +166,44 @@ padding-left: 15px;
 
 .pendingtoggle{
     cursor: pointer;
+}
+
+.settingDiv {
+    width: 400%;
+}
+
+.toastttt {
+    margin-top: 11px;
+}
+
+.settingDiv {
+
+
+    // display: flex;
+    select {
+        width: 145px;
+    }
+    label {
+        // width: 145px;
+    }
+    .toggleBtnn {
+    //     width: 14%;
+    //     text-align: center;
+    margin-left: 0;
+
+    }
+}
+
+.sortTaskBy {
+    width: fit-content;
+    margin: 0;
+}
+
+.formLabel {
+    width: 41%;
+    // width: 50%;
+}
+
+.perPage{
+    margin-left: 10px;
 }
