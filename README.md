@@ -48,4 +48,31 @@ In Phase 2, we’re going to connect the To Do Manager to a deployed API, backed
 
 ***
 
+***
+
+## Phase 3 ~ 
+
+In Phase 3, we’d like to extend the functionality of the application by potentially allowing users to set a few configuration options to change how the application behaves. 
+
+**The following user/developer stories detail the major functionality for this phase of the project.**
+
+- As a user, I would like to see my To Do List Items a few at a time so that I don’t have to wade through them all
+- As a user, I would like my default view to only be “Incomplete” Items so that I can quickly determine what I have to do.
+- As a user, I would like my list sorted by difficulty so that I can more easily prioritize
+- As a user, I would like the option to change my default preferences with regards to how many Items I see per page, which items are filtered, and how they are sorted
+
+<!-- ### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
+
+![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png) -->
+
+
+### UML 
+
+[Board Link](https://miro.com/welcomeonboard/anpCZjkxV2w2WHlYM0NPTGdPUWRBMTNPZ3RyYXN2MVliQkFzQWdqUWg1alVRajFLU0k2aE5JUk5TWHd0MEZOSnwzMDc0NDU3MzU3MzU4Mjc2Mjk1)
+
+![Untitled (30)](https://user-images.githubusercontent.com/78326110/124368190-4dcdb080-dc67-11eb-8e7e-20743624d6a9.jpg)
+
+
+***
+
 
