@@ -61,9 +61,9 @@ In Phase 3, we’d like to extend the functionality of the application by potent
 - As a user, I would like my list sorted by difficulty so that I can more easily prioritize
 - As a user, I would like the option to change my default preferences with regards to how many Items I see per page, which items are filtered, and how they are sorted
 
-<!-- ### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
+### [See deployed link <=](https://60e20c530d8a139c9669ae8f--goofy-hopper-dbb964.netlify.app/)
 
-![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png) -->
+![Screenshot 2021-07-04 223248](https://user-images.githubusercontent.com/78326110/124397312-db68d900-dd17-11eb-9912-5652b8739bc1.png)
 
 
 ### UML 
