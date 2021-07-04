@@ -6,7 +6,8 @@ import { Form } from 'react-bootstrap';
 const ContentSetting = (props) => {
     const context = useContext(SettingsContext)
 
-    const itemPerPageHandler = e => {
+    const itemsPerPage = e => {
+        e.preventDefault();
         context.setItemPerPage(parseInt(e.target.value))
     }
     const sortByHandler = e => {
@@ -16,7 +17,8 @@ const ContentSetting = (props) => {
         <React.Fragment>
             {/* <form> */}
             <form className="settingDiv">
-                <Form.Label name="Sort By" className="formLabel">  Sort tasks by:
+                <h4>Settings</h4>
+                <Form.Label name="Sort By" className="formLabel"> <p>Sort tasks by:</p> 
                     <select name="Sort By" title="Sort By" onChange={sortByHandler}>
                         <option value="assignee" >assignee</option>
                         <option value="difficulty" >difficulty</option>
@@ -26,11 +28,11 @@ const ContentSetting = (props) => {
                     <input type="switch" name="pending" />
                     <input type="switch" name="difficultySort" />  */}
                     <label name="itemPerPage"> <p className="perPage"> Tasks per page: </p>  </label>
-                    <input type="number" id="itemPerPage" name="itemPerPage" onChange={itemPerPageHandler} /><br />
+                    <input type="number" id="itemPerPage" placeholder="4" name="itemPerPage" onChange={itemsPerPage} /><br />
 
                     {/* <button type="submit"></button> */}
                 </Form.Label>
-                <Button className="toggleBtnn" variant="info" onClick={context.toggle} >{context.finished ? 'show all Tasks' : 'hide Completed Tasks'}</Button >
+                <Button className="toggleBtnn" variant="light" onClick={context.toggle} >{context.finished ? 'show all Tasks' : 'hide Completed Tasks'}</Button >
             </form>
             {/* </form> */}
         </React.Fragment>

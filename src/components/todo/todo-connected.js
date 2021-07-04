@@ -13,10 +13,12 @@ import './todo.scss';
 const ToDo = () => {
 
   // const [list, setList] = useState([]);
-  const [list, _getTodoItems, _toggleComplete, _addItem, deleteTask] = useAjax();
+  const [list, getToDoTasks, toggleHideShow, addNewItem, deleteTask] = useAjax();
 
-  useEffect(_getTodoItems, [_getTodoItems]);
-  document.title = `Tasks left  ${list.filter((item) => !item.complete).length}`;
+  useEffect(getToDoTasks, [getToDoTasks]);
+  document.title = `Tasks left  ${list.filter((item) =>  !item.complete).length}`;
+
+  // console.log(document.title)
 
   return (
     <>
@@ -35,13 +37,13 @@ const ToDo = () => {
 
         <div>
 
-          <TodoForm handleSubmit={_addItem} />
+          <TodoForm handleSubmit={addNewItem} />
         </div>
 
         <div>
           <TodoList
             list={list}
-            handleComplete={_toggleComplete}
+            handleComplete={toggleHideShow}
             deleteTask={deleteTask}
           />
         </div>

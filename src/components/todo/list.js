@@ -67,7 +67,7 @@ function TodoList(props) {
 
     let currentTasks = list.slice(first, last);
 
-    let numOfPages =currentTasks.length / maxItems + 1;
+    let numOfPages = currentTasks.length / maxItems + 1;
 
     context.setTaskSum(list.length);
 
@@ -101,84 +101,88 @@ function TodoList(props) {
 
 
             <div className="toastttt" >
-            {currentTasks.map(item => (
-                // <ListGroup.Item action variant={item.complete ? 'dark' : 'light'}
-                //     className={`complete-${item.complete.toString()}`}
-                //     key={item._id}
-                // >
-                //     <Badge pill variant={item.complete ? 'danger' : 'success'} > {item.complete ? 'completed' : 'pending'} </Badge>{' '}
+                {currentTasks.map(item => (
+                    // <ListGroup.Item action variant={item.complete ? 'dark' : 'light'}
+                    //     className={`complete-${item.complete.toString()}`}
+                    //     key={item._id}
+                    // >
+                    //     <Badge pill variant={item.complete ? 'danger' : 'success'} > {item.complete ? 'completed' : 'pending'} </Badge>{' '}
 
 
-                //     <div className="btns">
+                    //     <div className="btns">
 
-                //         {/* <Button variant="info" onClick={() => toggle(item._id)} value={item._id}>Edit</Button>{' '} */}
-                //         <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button>
+                    //         {/* <Button variant="info" onClick={() => toggle(item._id)} value={item._id}>Edit</Button>{' '} */}
+                    //         <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button>
 
-                //     </div>
+                    //     </div>
 
-                //     <br></br>
-                //     <br></br>
+                    //     <br></br>
+                    //     <br></br>
 
-                //     <span onClick={() => props.handleComplete(item._id)}>
-                //         {item.text} : {item.assignee} , difficulty :  {item.difficulty} , due : {item.duedate}
-                //     </span>
+                    //     <span onClick={() => props.handleComplete(item._id)}>
+                    //         {item.text} : {item.assignee} , difficulty :  {item.difficulty} , due : {item.duedate}
+                    //     </span>
 
-                //     <br></br>
+                    //     <br></br>
 
-                <Toast 
-                    onClose={() => props.deleteTask(item._id)} value={item._id}
-                >
-                    {/* <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button> */}
-
-                    <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-                        <strong className="mr-auto">
-                            <span onClick={() => props.handleComplete(item._id)}>
-
-                                <Badge className="pendingtoggle" pill variant={item.complete ? 'danger' : 'success'} > {item.complete ? 'completed' : 'pending'} </Badge>{' '}
-                                {item.assignee}
-                            </span>
-
-                        </strong>
+                    <Toast
+                        onClose={() => props.deleteTask(item._id)} value={item._id}
+                    >
                         {/* <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button> */}
-                        {/* <small>11 mins ago</small> */}
-                    </Toast.Header>
-                    <Toast.Body>
-                        {item.text}
 
-                        <br></br>
-                        <div className="difff">
-                            Difficulty:  {item.difficulty}
+                        <Toast.Header>
+                            <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
+                            <strong className="mr-auto">
+                                <span onClick={() => props.handleComplete(item._id)}>
 
-                        </div>
+                                    <Badge className="pendingtoggle" pill variant={item.complete ? 'danger' : 'success'} > {item.complete ? 'completed' : 'pending'} </Badge>{' '}
+                                    {item.assignee}
+                                </span>
 
-                        {/* , due : {item.duedate} */}
-                    </Toast.Body>
-                </Toast>
+                            </strong>
+                            {/* <Button variant="light" onClick={() => props.deleteTask(item._id)} value={item._id}>X</Button> */}
+                            {/* <small>11 mins ago</small> */}
+                        </Toast.Header>
+                        <Toast.Body>
+                            {item.text}
+
+                            <br></br>
+                            <div className="difff">
+                                Difficulty:  {item.difficulty}
+
+                            </div>
+
+                            {/* , due : {item.duedate} */}
+                        </Toast.Body>
+                    </Toast>
 
 
-                // </ListGroup.Item>
-            ))}
+                    // </ListGroup.Item>
+                ))}
 
             </div>
             {/* </ListGroup> */}
 
-            <Pagination>
-                <Pagination.Prev
+            <section className='pagenation'>
 
-                    disabled={active === 1 ? true : false}
-                    onClick={() => {
-                        setCurrentPage(currentPage - 1);
-                    }}
-                />
-                {items}
-                <Pagination.Next
-                    disabled={active > numOfPages - 1 ? true : false}
-                    onClick={() => {
-                        setCurrentPage(currentPage + 1);
-                    }}
-                />
-            </Pagination>
+                <Pagination>
+                    <Pagination.Prev
+
+                        disabled={active === 1 ? true : false}
+                        onClick={() => {
+                            setCurrentPage(currentPage - 1);
+                        }}
+                    />
+                    {items}
+                    <Pagination.Next
+                        disabled={active > numOfPages - 1 ? true : false}
+                        onClick={() => {
+                            setCurrentPage(currentPage + 1);
+                        }}
+                    />
+                </Pagination>
+            </section>
+
 
             <If condition={flag}
             >
