@@ -8,7 +8,7 @@ import { Form } from 'react-bootstrap'
 import useForm from './useForm'
 
 
-import ContentSetting from './settings.jsx'
+import ContentSetting from './settings'
 
 function TodoForm(props) {
 
@@ -38,7 +38,7 @@ function TodoForm(props) {
 
 <ContentSetting />
 
-      <Form onSubmit={handleSubmit}>
+      <Form className="addTodoform" onSubmit={handleSubmit}>
       <h4 className="fromform">Add To Do Item</h4>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>

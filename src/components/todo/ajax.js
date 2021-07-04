@@ -5,7 +5,7 @@ let todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
 const useAjax = () => {
   const [list, setList] = useState([]);
 
-  const _addItem = (item) => {
+  const addNewItem = (item) => {
     item.due = new Date();
     const fetch = () => {
 
@@ -27,7 +27,7 @@ const useAjax = () => {
     fetch();
   }
 
-  const _toggleComplete = (id) => {
+  const toggleHideShow = (id) => {
 
     let item = list.filter(i => i._id === id)[0] || {};
     if (item._id) {
@@ -50,7 +50,7 @@ const useAjax = () => {
 
   }
 
-  const _getTodoItems = () => {
+  const getToDoTasks = () => {
     const fetch = async () => {
       let res = await axios.get(todoAPI, {
         headers: { 'Content-Type': 'application/json' },
@@ -64,7 +64,7 @@ const useAjax = () => {
 
   }
 
-  const deleteH = (id) => {
+  const deleteTask = (id) => {
 
     let item = list.filter(i => i._id === id)[0] || {};
     const url2 = `${todoAPI}/${item._id}`
@@ -82,7 +82,7 @@ const useAjax = () => {
   }
 
 
-  return [list, _getTodoItems, _toggleComplete, _addItem, deleteH];
+  return [list, getToDoTasks, toggleHideShow, addNewItem, deleteTask];
 
 }
 

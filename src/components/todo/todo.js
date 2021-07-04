@@ -1,6 +1,6 @@
 import React from 'react';
-import TodoForm from './form.js';
-import TodoList from './list.js';
+import TodoForm from './form';
+import TodoList from './list';
 
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,7 +10,7 @@ import './todo.scss';
 
 // class ToDo extends React.Component {
 
-function ToDo(props) {
+function to_Do(props) {
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -26,14 +26,14 @@ function ToDo(props) {
         setList([...list, item]);
     };
 
-    const toggleComplete = id => {
+    const toggleHideShow = id => {
 
         let item = list.filter(i => i._id === id)[0] || {};
 
         if (item._id) {
             item.complete = !item.complete;
             let listt = list.map(listItem => listItem._id === item._id ? item : listItem);
-            setList( listt );
+            setList(listt);
         }
 
     };
@@ -42,14 +42,14 @@ function ToDo(props) {
 
 
         let listtt = [
-            { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A', duedate: '2021-06-27' },
-            { _id: 2, complete: false, text: 'Do the Laundry', difficulty: 2, assignee: 'Person A', duedate: '2021-06-27' },
-            { _id: 3, complete: false, text: 'Walk the Dog', difficulty: 4, assignee: 'Person B', duedate: '2021-06-27' },
-            { _id: 4, complete: true, text: 'Do Homework', difficulty: 3, assignee: 'Person C', duedate: '2021-06-27' },
-            { _id: 5, complete: false, text: 'Take a Nap', difficulty: 1, assignee: 'Person B', duedate: '2021-06-27' },
+            { _id: 1, complete: false, text: 'Water the plants', difficulty: 1, assignee: 'Person A', duedate: '2021-06-30' },
+            { _id: 2, complete: false, text: 'Do the Laundry', difficulty: 4, assignee: 'Person B', duedate: '2021-06-30' },
+            { _id: 3, complete: false, text: 'Wash Dishes', difficulty: 5, assignee: 'Person C', duedate: '2021-06-30' },
+            { _id: 4, complete: true, text: 'Cook', difficulty: 5, assignee: 'Person D', duedate: '2021-06-30' },
+            { _id: 5, complete: false, text: 'Clean the Kitchen', difficulty: 4, assignee: 'Person E', duedate: '2021-06-30' },
         ];
 
-        setList( listtt );
+        setList(listtt);
 
     }, [])
 
@@ -100,7 +100,7 @@ function ToDo(props) {
                 <div>
                     <TodoList
                         list={list}
-                        handleComplete={toggleComplete}
+                        handleComplete={toggleHideShow}
                         deleteTask={deleteTask}
                         editTask={editTask}
                     />
@@ -114,5 +114,5 @@ function ToDo(props) {
 
 // }
 
-export default ToDo;
+export default to_Do;
 
