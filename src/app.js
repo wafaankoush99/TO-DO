@@ -1,12 +1,18 @@
-import React from 'react';
-
-import ToDo from './components/todo/todo-connected';
-
-// export default class App extends React.Component {
-export default function App() {
+  
+import React , {useContext}from 'react';
+import Header from './components/todo/header'
+import ToDo from './components/todo/todo-connected.js';
+import If from './components/todo/if.jsx'
+import { AuthContext } from './components/todo/auth-context';
+export default function App () {
+ const context  = useContext(AuthContext);
     return (
-        <>
-            <ToDo />
-        </>
+      <>
+        <Header/>
+        <If condition={context.loggedIn}>
+          <ToDo />
+        </If>
+      </>
     );
+  
 }
