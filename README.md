@@ -75,4 +75,30 @@ In Phase 3, we’d like to extend the functionality of the application by potent
 
 ***
 
+## Phase 4 ~ 
+
+In Phase 4, we’d like to extend the functionality of the application by requiring users be logged in to view items and also restrict access based on user type. 
+
+**The following user/developer stories detail the major functionality for this phase of the project.**
+
+- As a user, I want to provide a way for other users to create new accounts
+- As a user, I want to provide a way for all users to login to their account
+- As a user, I want to make sure that my To Do items are only viewable to users that have logged in with a valid account.
+- As a user, I want to ensure that only fellow users that are allowed to “create”, based on their user type, can add new To Do Items
+- As a user, I want to ensure that only fellow users that are allowed to “update”, based on their user type, can mark To Do Items complete
+- As a user, I want to ensure that only fellow users that are allowed to “delete”, based on their user type, can delete new To Do Items
+
+<!-- ### [See deployed link <=](https://60e4467fe522aa2fb75e2ee0--hopeful-yalow-bddaf8.netlify.app/)
+
+![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png) -->
+
+
+### UML 
+
+[Board Link](https://miro.com/welcomeonboard/anpCZjkxV2w2WHlYM0NPTGdPUWRBMTNPZ3RyYXN2MVliQkFzQWdqUWg1alVRajFLU0k2aE5JUk5TWHd0MEZOSnwzMDc0NDU3MzU3MzU4Mjc2Mjk1)
+
+![Untitled (32)](https://user-images.githubusercontent.com/78326110/124596193-a91bc080-de6a-11eb-9cb3-bce00d0b668b.jpg)
+
+
+
 
