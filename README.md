@@ -61,9 +61,9 @@ In Phase 3, we’d like to extend the functionality of the application by potent
 - As a user, I would like my list sorted by difficulty so that I can more easily prioritize
 - As a user, I would like the option to change my default preferences with regards to how many Items I see per page, which items are filtered, and how they are sorted
 
-<!-- ### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
+### [See deployed link <=](https://60da63755f136d3f04a4c47b--hungry-hawking-4e1535.netlify.app/)
 
-![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png) -->
+![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png)
 
 
 ### UML 
@@ -88,9 +88,9 @@ In Phase 4, we’d like to extend the functionality of the application by requir
 - As a user, I want to ensure that only fellow users that are allowed to “update”, based on their user type, can mark To Do Items complete
 - As a user, I want to ensure that only fellow users that are allowed to “delete”, based on their user type, can delete new To Do Items
 
-<!-- ### [See deployed link <=](https://60e4467fe522aa2fb75e2ee0--hopeful-yalow-bddaf8.netlify.app/)
+### [See deployed link <=](https://60e4467fe522aa2fb75e2ee0--hopeful-yalow-bddaf8.netlify.app/)
 
-![Screenshot 2021-06-29 030739](https://user-images.githubusercontent.com/78326110/123718428-c27ba600-d887-11eb-8bd8-b3c9e4d791f1.png) -->
+![Screenshot 2021-07-06 150653](https://user-images.githubusercontent.com/78326110/124597220-dcab1a80-de6b-11eb-9ed5-5afe69e88aeb.png)
 
 
 ### UML 
