@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useForm = (callback) => {
+const useForm = (cb) => {
     const [item,setItem] = useState ({})
 
     const handleInputChange = e => {
@@ -10,7 +10,7 @@ const useForm = (callback) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         e.target.reset();
-        callback(item);
+        cb(item);
       };
 
     return [handleInputChange , handleSubmit]

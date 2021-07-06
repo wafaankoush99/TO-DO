@@ -1,24 +1,21 @@
+  
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import App from './app.js';
 import SettingsContext from './components/todo/setting-context'
+import App from './app.js';
+import  AuthContext  from './components/todo/auth-context';
+import { BrowserRouter } from "react-router-dom";
 
-// class Main extends React.Component {
-//   render() {
-
-function Main(props) {
-
+function Main (props) {
     return (
+      <BrowserRouter>
+      <AuthContext>
         <SettingsContext>
-            <App />
+          <App />
         </SettingsContext>
+      </AuthContext>
+      </BrowserRouter>
     )
-
-
 }
-//   }
-// }
-
 const rootElement = document.getElementById('root');
 ReactDOM.render(<Main />, rootElement);
